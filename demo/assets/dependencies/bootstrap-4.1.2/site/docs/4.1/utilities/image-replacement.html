@@ -1,0 +1,35 @@
+<html>
+      <head>
+        <meta charset="UTF-8">
+        <title>image-replacement.md</title>
+      </head>
+      <body>
+        <hr>
+<p>layout: docs
+title: Image replacement
+description: Swap text for background images with the image replacement class.
+group: utilities</p>
+<h2 id="toc-true">toc: true</h2>
+<p>{% capture callout %}</p>
+<h5 id="warning">Warning</h5>
+<p>The <code>text-hide()</code> class and mixin has been deprecated as of v4.1. It will be removed entirely in v5.
+{% endcapture %}
+{% include callout.html content=callout type=&quot;warning&quot; %}</p>
+<p>Utilize the <code>.text-hide</code> class or mixin to help replace an element&#39;s text content with a background image.</p>
+<p>{% highlight html %}</p>
+<p><h1 class="text-hide">Custom heading</h1>
+{% endhighlight %}</p>
+<p>{% highlight scss %}
+// Usage as a mixin
+.heading {
+  @include text-hide;
+}
+{% endhighlight %}</p>
+<p>Use the <code>.text-hide</code> class to maintain the accessibility and SEO benefits of heading tags, but want to utilize a <code>background-image</code> instead of text.</p>
+<p>{% capture example %}</p>
+<p><h1 class="text-hide" style="background-image: url('/docs/{{ site.docs_version }}/assets/brand/bootstrap-solid.svg'); width: 50px; height: 50px;">Bootstrap</h1>
+{% endcapture %}
+{% include example.html content=example %}</p>
+
+      </body>
+    </html>

@@ -1,0 +1,23 @@
+<html>
+      <head>
+        <meta charset="UTF-8">
+        <title>translations.md</title>
+      </head>
+      <body>
+        <hr>
+<p>layout: docs
+title: Translations
+description: Links to community-translated Bootstrap documentation sites.</p>
+<h2 id="group-about">group: about</h2>
+<p>Community members have translated Bootstrap&#39;s documentation into various languages. None are officially supported and they may not always be up to date.</p>
+<ul>
+{% for language in site.data.translations %}
+  <li><a href="{{ language.url }}" hreflang="{{ language.code }}">{{ language.description }} ({{ language.name }})</a></li>
+{% endfor %}
+</ul>
+
+<p><strong>We don&#39;t help organize or host translations, we just link to them.</strong></p>
+<p>Finished a new or better translation? Open a pull request to add it to our list.</p>
+
+      </body>
+    </html>

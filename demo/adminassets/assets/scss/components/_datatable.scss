@@ -1,0 +1,37 @@
+table {
+    &.dataTable {
+        border-collapse: collapse !important;
+    }
+    & thead {
+        border-bottom: 1px solid #fbfbfb;
+        & tr {
+            & th {
+                font-size: .75rem;
+                font-family: $familyMontserrat, $fallbackfont;
+                font-weight: 600;
+                color: #bbb;
+                padding: 8px 10px;
+            }
+        }
+    }
+    & tbody {
+        & tr {
+            border-bottom: 1px solid #f9f9f9;
+            &:last-child {
+                border-bottom: none;
+            }
+            & td {
+                font-size: .875rem;
+                color: #777;
+                font-weight: 600;
+                padding: 8px 10px;
+                & small {
+                    display: block;
+                    color: inherit;
+                    font-weight: 600;
+                    opacity: .6;
+                }
+            }
+        }
+    }
+}

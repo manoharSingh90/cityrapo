@@ -1,0 +1,40 @@
+.thanksPage {
+    color: #888;
+    padding: 2rem 0;
+    overflow: hidden;
+    text-align: center;
+    @media #{$tablet} {
+        padding: 4rem 0;
+    }
+    & h2 {
+        font-weight: 700;
+        color: $secondary;
+        font-size: 1rem;
+        & span {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            background: #f1f1f1;
+            padding: .25rem;
+            display: block;
+            margin: 0 auto;
+            margin-bottom: .25rem;
+            &.filled {
+                background: $secondary;
+                color: #fff;
+            }
+            & img {
+                display: block;
+                margin: 0 auto;
+                width: 75%;
+                position: relative;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+        }
+    }
+    & h3 {
+        font-size: 1rem;
+        color: #111;
+    }
+}

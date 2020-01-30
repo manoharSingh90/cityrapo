@@ -1,0 +1,127 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>jQuery ffrating.js Plugin Demos</title>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
+<script src="scripts/ffrating.js"></script>
+<link href="styles/ffrating.css" rel="stylesheet"   />
+<style>
+body {
+	background-color: #fafafa;
+	font-family: 'Roboto';
+}
+code {
+	background: #dedcdc;
+	padding: 10px;
+	display: block;
+}
+.code-block-wrapper {
+	clear: both;
+	display: block;
+	padding-bottom: 50px;
+	overflow: hidden;
+}
+.code-block {
+	display: block;
+	clear: both;
+	float: left;
+	padding-bottom: 20px;
+}
+.side-bar {
+	width: 25%;
+	display: block;
+	float: left;
+}
+.main-content {
+	width: 75%;
+	display: block;
+	float: left;
+}
+.side-bar ul>li {
+	list-style-type: none;
+}
+.side-bar ul>li>a {
+	text-decoration: none !important;
+	color: #272626;
+	border-bottom: 1px solid #6d6c6c;
+	padding: 10px 5px;
+	display: inline-block;
+}
+</style>
+</head>
+<body>
+<h1>jQuery ffrating.js Plugin Demos</h1>
+<div class="side-bar">
+  <ul>
+    <li><a href="#NPS">NPS</a></li>
+    <li><a href="#STAR">Star rating</a></li>
+  </ul>
+</div>
+<div class="main-content">
+  <div class="jquery-script-ads"><script type="text/javascript"><!--
+google_ad_client = "ca-pub-2783044520727903";
+/* jQuery_demo */
+google_ad_slot = "2780937993";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script> 
+    <script type="text/javascript"
+src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script></div>
+  <div class="code-block-wrapper">
+    <h4 id="NPS">NPS Controls</h4>
+    <div class="code-block">
+      <p>Default NPS initialization</p>
+      <input type="textbox" id="nps1" class="ff-rating" />
+    </div>
+    <div class="code-block">
+      <p>Initialize NPS labels with data attributes</p>
+      <input type="textbox" id="nps2" data-flex-minlabel="Disagree"  data-flex-middlelabel="Neutral" data-flex-maxlabel="Agree"  class="ff-rating" />
+    </div>
+    <div class="code-block">
+      <p>Initialize NPS labels within javascript</p>
+      <input type="textbox" id="nps3"  class="ff-rating" />
+    </div>
+  </div>
+  <div class="code-block-wrapper">
+    <h4 id="STAR">Star Rating Controls</h4>
+    <div class="code-block">
+      <p>Default Star initialization</p>
+      <input type="textbox" id="star1" class="ff-rating" />
+    </div>
+    <div class="code-block">
+      <p>Initialize Star with readonly and option to show selected rating as value</p>
+      <input type="textbox" id="star2" value="3"  class="ff-rating" />
+    </div>
+  </div>
+</div>
+<script>
+$(document).ready(function(){
+ $('#nps1').ffrating({isStar:false});
+ $('#nps2').ffrating({isStar:false});
+ $('#nps3').ffrating({isStar:false,minLabel:'Disagree',mediumLabel:'Neutral',maxLabel:'Agree'});
+ $('#star1').ffrating({isStar:true});
+ $('#star2').ffrating({isStar:true,readonly:true,showSelectedRating:true,min:1,max:5});
+
+});
+</script>
+</body>
+<script type="text/javascript">
+
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-36251023-1']);
+_gaq.push(['_setDomainName', 'jqueryscript.net']);
+_gaq.push(['_trackPageview']);
+
+(function() {
+var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+
+</script>
+</html>

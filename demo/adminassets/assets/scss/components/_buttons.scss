@@ -1,0 +1,86 @@
+.btn {
+    transition: all 200ms linear;
+    box-shadow: none !important;
+    border-radius: 0;
+    text-transform: uppercase;
+    font-family: $familyMontserrat, $fallbackfont;
+    font-weight: 600;
+    font-size: .875rem;
+    &:focus,
+    &.focus {
+        box-shadow: none;
+    }
+}
+
+.btn-primary {
+    color: $white;
+    border-color: #1a1a1a;
+    &:focus,
+    &.focus {
+        box-shadow: none;
+    }
+}
+
+.btn-secondary {
+    border-color: #1a1a1a;
+}
+
+.btn-group-lg>.btn,
+.btn-lg {
+    font-size: 1rem;
+}
+
+.btn-link {
+    color: $secondary;
+    &:hover,
+    &:focus,
+    &.focus {
+        color: $secondary;
+        text-decoration: none;
+    }
+}
+
+.btn-outline-primary {
+    color: $primary;
+    border-color: $primary;
+    position: relative;
+    &:focus,
+    &.focus {
+        box-shadow: none;
+    }
+    &:hover {
+        opacity: .9;
+        color: rgba($primary, .7);
+        background-color: transparent;
+        border-color: rgba($primary, .7);
+        box-shadow: 2px 4px 24px rgba($black, .25);
+    }
+    &:not(:disabled):not(.disabled):active,
+    &:not(:disabled):not(.disabled).active {
+        background-color: transparent;
+        color: $primary;
+        border-color: $primary;
+    }
+}
+
+.btn-shadow {
+    box-shadow: 0 2px 10px rgba($indigo, .2) !important;
+    &:hover {
+        // box-shadow: 2px 2px 0 rgba($indigo, .1) !important;
+        box-shadow: 0 4px 30px rgba($indigo, .45) !important;
+    }
+}
+
+.btn-icon {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 .5rem;
+    margin-top: -2px;
+    & img {
+        display: block;
+    }
+}
+
+.text-default {
+    color: $light !important;
+}

@@ -1,0 +1,118 @@
+<html>
+      <head>
+        <meta charset="UTF-8">
+        <title>README.md</title>
+      </head>
+      <body>
+        <h2 id="looking-for-maintainers">Looking for maintainers</h2>
+<p>Please see: <a href="https://github.com/nicolasbize/magicsuggest/issues/307">https://github.com/nicolasbize/magicsuggest/issues/307</a></p>
+<h2 id="magicsuggest-v2-0-0">MagicSuggest v2.0.0</h2>
+<p>MagicSuggest has a new home here: <a href="http://nicolasbize.com/magicsuggest/">http://nicolasbize.com/magicsuggest/</a>
+It includes a great new API documentation, examples, tutorials and more!</p>
+<p>Milestone change log:</p>
+<h1 id="magicsuggest-v-2-0-0">MagicSuggest v.2.0.0</h1>
+<ul>
+<li>New home at <a href="http://nicolasbize.com/magicsuggest/">http://nicolasbize.com/magicsuggest/</a> to run dynamic examples that gh-pages couldn&#39;t handle</li>
+<li>Now runs with Bootstrap 3 (required)</li>
+<li>Responsive design</li>
+<li>No more intrusive loading</li>
+</ul>
+<h1 id="v1-3-1-bugfixing-again-minor-tagged-milestone-august-17th-2013-">v1.3.1 BugFixing again! (Minor Tagged Milestone - August 17th, 2013)</h1>
+<ul>
+<li>(fix) enable after disable now works (credits to amanokerim - <a href="https://github.com/amanokerim">https://github.com/amanokerim</a>)</li>
+<li>(fix) trigger icon now takes full height (credits to DioVayne - <a href="https://github.com/DioVayne">https://github.com/DioVayne</a>)</li>
+<li>(fix) clear now compatible with isSilent (credits to Coywolf - <a href="https://github.com/Coywolf">https://github.com/Coywolf</a>)</li>
+<li>(fix) groupBy was broken by 1.3.0</li>
+<li>(fea) compatibility with latest jQuery 1.10.2 (credits to RafaelMalgor - <a href="https://github.com/RafaelMalgor">https://github.com/RafaelMalgor</a>)</li>
+<li>(fea) resulted JSON objects can now have a custom result property resultsField (credits to RafaelMalgor - <a href="https://github.com/RafaelMalgor">https://github.com/RafaelMalgor</a>)</li>
+</ul>
+<h1 id="v1-3-0-some-more-features-and-bugfixing-minor-tagged-milestone-may-25th-2013-">v1.3.0 Some more features and bugfixing (Minor Tagged Milestone - May 25th, 2013)</h1>
+<ul>
+<li>(fea) combo component can now be fetched through the same div element (credits to meghuizen - <a href="https://github.com/meghuizen">https://github.com/meghuizen</a>)</li>
+<li>(fix) CSS bug with 1.2.7+ with triggerHidden (credits to ScullWM - <a href="https://github.com/ScullWM">https://github.com/ScullWM</a>)</li>
+<li>(fix) container would always render with 1 row even though a bunch of data was loaded (credits to travishaagen - <a href="https://github.com/travishaagen">https://github.com/travishaagen</a>)</li>
+<li>(fea) added minimum jQuery version to work in docs (credits to rajeshmeniya - <a href="https://github.com/rajeshmeniya">https://github.com/rajeshmeniya</a>)</li>
+<li>(fix) input was not correctly enabled / disabled (credits to zerekw - <a href="https://github.com/zerekw">https://github.com/zerekw</a>)</li>
+<li>(fea) added getName and setName to easily fetch/set form name of component (credits to jbmoens - <a href="https://github.com/jbmoens">https://github.com/jbmoens</a>)</li>
+<li>(fix) when a value is specified in the DOM original element, it is passed correctly to MS. (credits to jbmoens - <a href="https://github.com/jbmoens">https://github.com/jbmoens</a>)</li>
+<li>(fix) input space now always uses the remaining space as this leads to less issues.</li>
+<li>(fea) combo has now more logic when used for a single selection combo box.</li>
+<li>(fix) space taken for single selection on a small combo remains on one line. (credits to ScullWM - <a href="https://github.com/ScullWM">https://github.com/ScullWM</a>)</li>
+<li>(fea) multiple items can now be selected through the Ctrl key (credits to meghuizen - <a href="https://github.com/meghuizen">https://github.com/meghuizen</a>)</li>
+<li>(fea) trigger icon now uses pure CSS (credits to meghuizen - <a href="https://github.com/meghuizen">https://github.com/meghuizen</a>)</li>
+<li>(fea) cfg(data) can now take a function as parameter (credits to meghuizen - <a href="https://github.com/meghuizen">https://github.com/meghuizen</a>)</li>
+<li>(fea) cfg(data) can take a json object whose data items are within the results property</li>
+<li>(fix) CSS has been fixed so it behaves correctly within a bootstrap modal (credits to daenuprobst - <a href="https://github.com/daenuprobst">https://github.com/daenuprobst</a>)</li>
+<li>(fea) suggestion rendering optimized by reducing draw calls to one. (credits to meghuizen - <a href="https://github.com/meghuizen">https://github.com/meghuizen</a>)</li>
+<li>(fix) tags can now longer be removed when the combo is disabled (credits to grena - <a href="https://github.com/grena">https://github.com/grena</a>)</li>
+<li>(fix) setting data was only going through visible set of suggestions (credits to grena - <a href="https://github.com/grena">https://github.com/grena</a>)</li>
+<li>(fix) missing semi-colons, went through full jslint (credits to grena - <a href="https://github.com/grena">https://github.com/grena</a>)</li>
+<li>(fix) suggestions were not appearing when maxSuggestions was set to 10. (credits to zerekw - <a href="https://github.com/zerekw">https://github.com/zerekw</a> and plasmaxy - <a href="https://github.com/plasmaxy">https://github.com/plasmaxy</a>)</li>
+<li>(fix) the clear function was broken (credits to travishaagen - <a href="https://github.com/travishaagen">https://github.com/travishaagen</a>)</li>
+<li>(fea) the component&#39;s config can now be setup entirely from the DOM container element.</li>
+<li>(fea) added a silent mode to selection changing methods in order to know if it was user-triggered or not. (credits to travishaagen - <a href="https://github.com/travishaagen">https://github.com/travishaagen</a>)</li>
+<li>(fea) added a setData(object) method to fill the combo after it has been rendered (credits to travishaagen - <a href="https://github.com/travishaagen">https://github.com/travishaagen</a>)</li>
+<li>(fix) ajax query was sent twice when the user was typing faster than the typeDelay (credits to arvenom - <a href="https://github.com/arvenom">https://github.com/arvenom</a>)</li>
+<li>(fix) highlighting the search results was also highlighting html tags when using custom rendering (credits to pstuart2 - <a href="https://github.com/pstuart2">https://github.com/pstuart2</a>)</li>
+<li>(fea) added cfg(strictSuggest) so that user can choose how the suggestions will be made</li>
+<li>(fea) added cfg(toggleOnClick) so that the user can expand/close the combo by clicking on it (credits to psulek - <a href="https://github.com/psulek">https://github.com/psulek</a>)</li>
+<li>(fix) empty suggestion text was wrongly triggered when performing initial ajax call (credits to curtgrimes - <a href="https://github.com/curtgrimes">https://github.com/curtgrimes</a>)</li>
+<li>(fea) added cfg(selectionRenderer) (credits to pstuart2 - <a href="https://github.com/pstuart2">https://github.com/pstuart2</a>)</li>
+<li>(fix) empty text class was not triggered properly (credits to jods4 - <a href="https://github.com/jods4">https://github.com/jods4</a>)</li>
+<li>(fix) IE8 compatibility (credits to Airborn22 - <a href="https://github.com/Airborn22">https://github.com/Airborn22</a>)</li>
+<li>(fea) MagicSuggest can now be rendered from a select dom component. (credits to Yogu - <a href="https://github.com/Yogu">https://github.com/Yogu</a>)</li>
+<li>(fea) on blur now automatically adds the typed text to the selection if free entries are allowed (credits to Airborn22 - <a href="https://github.com/Airborn22">https://github.com/Airborn22</a>)</li>
+<li>(fea) new public method empty() which will clear the user text.</li>
+<li>(fix) make sure combo is filled prior to triggering load event</li>
+<li>(fea) renamed some events for better readability</li>
+</ul>
+<h1 id="v1-2-0-standardization-on-jquery-plugins-minor-tagged-milestone-mar-4th-2013-">v1.2.0 Standardization on jQuery plugins (Minor Tagged Milestone - Mar. 4th 2013)</h1>
+<ul>
+<li>(fix) fixed disabled behaviour when one could still edit the emptyText</li>
+<li>(fix) collapse method would throw an error</li>
+<li>(cfg) typeDelay: Amount (in ms) between keyboard registers (credits to jayesbee - <a href="https://github.com/jayesbee">https://github.com/jayesbee</a>)</li>
+<li>(fea) standardized on jQuery plugin (credits to jayesbee - <a href="https://github.com/jayesbee">https://github.com/jayesbee</a>)</li>
+<li>(fea) added documentation examples</li>
+<li>(cfg) name: name used for magicsuggest as a form element (credits to iambibhas - <a href="https://github.com/iambibhas">https://github.com/iambibhas</a>)</li>
+<li>(fix) start up rendering when value rendered as text</li>
+<li>(cfg) dataParams: additional parameters for ajax request (credits to jayesbee - <a href="https://github.com/jayesbee">https://github.com/jayesbee</a>)</li>
+<li>(fix) other rendering issues with inner text</li>
+</ul>
+<h1 id="v1-1-0-various-enhancements-and-bug-fixing-minor-tagged-milestone-feb-19th-2013-">v1.1.0 Various enhancements and bug fixing (Minor Tagged Milestone - Feb. 19th 2013)</h1>
+<ul>
+<li>(fea) close cross style now blends in a bit more</li>
+<li>(fea) escape now collapses the combo (without loosing focus)</li>
+<li>(fix) can&#39;t enter entries made out of space</li>
+<li>(cfg) noSuggestionText: text displayed when there are no suggestions from given data</li>
+<li>(cfg) minCharsRenderer: allows to customize message when not enough characters are entered to trigger a search</li>
+<li>(cfg) maxEntryRenderer: allows to customize message when too many characters have been entered</li>
+<li>(cfg) maxEntryLength: amount of characters to limit user input</li>
+<li>(cfg) style: custom style applied to the main container</li>
+<li>(cfg) infoMsgCls: custom class to apply to the helper</li>
+<li>(fea) new helper message on upper right to inform on the component status</li>
+<li>(cfg) id: allows to give the component a custom ID</li>
+<li>(cfg) inputCfg : allows additional parameters passed out to the INPUT tag. Enables usage of AngularJS&#39;s custom tags for ex.</li>
+<li>(cfg) renderer : allows custom rendering within the combo.</li>
+<li>(cfg) groupBy : allows grouping within the combo box listing.</li>
+<li>(fix) blur event now registers correctly when selecting an element from the combo</li>
+<li>(fix) flicker in IE when hovering trigger</li>
+<li>(cfg) strictSuggest : set how suggestions will be proposed</li>
+<li>(fix) maxResults is now correctly interpreted</li>
+<li>(fix) maxSelection is now correctly interpreted</li>
+<li>(cfg) method : set the ajax method, default to &#39;POST&#39;</li>
+<li>(fea) ajax request can now interpret multiple results from server base.</li>
+<li>(fix) bug where the blur event would be triggered when clicking upon the page</li>
+<li>(cfg) required : triggers invalid / valid events when not filled</li>
+<li>(fea) validation through isValid() method</li>
+</ul>
+<h1 id="v1-0-initial-component-release">v1.0. initial component release</h1>
+<ul>
+<li>choose to allow free entries or not</li>
+<li>keyboard management</li>
+<li>theme ability</li>
+<li>static and dynamic data processing</li>
+<li>positionning</li>
+</ul>
+
+      </body>
+    </html>

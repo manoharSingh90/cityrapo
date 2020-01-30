@@ -1,0 +1,36 @@
+<html>
+      <head>
+        <meta charset="UTF-8">
+        <title>visibility.md</title>
+      </head>
+      <body>
+        <hr>
+<p>layout: docs
+title: Visibility
+description: Control the visibility, without modifying the display, of elements with visibility utilities.</p>
+<h2 id="group-utilities">group: utilities</h2>
+<p>Set the <code>visibility</code> of elements with our visibility utilities. These utility classes do not modify the <code>display</code> value at all and do not affect layout – <code>.invisible</code> elements still take up space in the page. Content will be hidden both visually and for assistive technology/screen reader users.</p>
+<p>Apply <code>.visible</code> or <code>.invisible</code> as needed.</p>
+<p>{% highlight html %}</p>
+<p><div class="visible">...</div></p>
+<p><div class="invisible">...</div>
+{% endhighlight %}</p>
+<p>{% highlight scss %}
+// Class
+.visible {
+  visibility: visible;
+}
+.invisible {
+  visibility: hidden;
+}</p>
+<p>// Usage as a mixin
+.element {
+  @include invisible(visible);
+}
+.element {
+  @include invisible(hidden);
+}
+{% endhighlight %}</p>
+
+      </body>
+    </html>

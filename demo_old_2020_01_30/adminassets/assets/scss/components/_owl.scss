@@ -1,0 +1,35 @@
+.owl-carousel {
+    padding: 0 .25rem;
+}
+
+.owl-nav {
+    & button {
+        position: absolute;
+        bottom: 50%;
+        transform: translateY(50%);
+        font-size: 2.125rem !important;
+        font-weight: normal !important;
+        color: #666 !important;
+        & span {
+            display: block;
+            width: 20px;
+            line-height: 12px;
+            height: 20px;
+        }
+        &.disabled {
+            opacity: 0;
+        }
+        &.owl-prev {
+            left: -6px;
+            @media #{$mobile} {
+                left: -18px;
+            }
+        }
+        &.owl-next {
+            right: -6px;
+            @media #{$mobile} {
+                right: -18px;
+            }
+        }
+    }
+}

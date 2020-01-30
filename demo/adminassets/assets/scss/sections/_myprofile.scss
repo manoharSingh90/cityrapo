@@ -1,0 +1,146 @@
+.myprofilePage {
+    position: relative;
+    color: #888;
+    font-size: .875rem;
+    padding-bottom: 1.5rem;
+    & .smallTitle {
+        margin-bottom: .10rem;
+    }
+    & .normalTitle {
+        color: #111;
+    }
+    & .profileImage {
+        width: 160px;
+        height: 160px;
+        display: block;
+        margin: 1rem 0;
+        border-radius: 50%;
+        background: #ddd;
+        & img {
+            position: relative;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+}
+
+.profileLeft {
+    padding: 1.75rem;
+    box-shadow: 0 0 80px rgba(#000, .05);
+    overflow: hidden;
+    & p {
+        color: #333;
+    }
+    @media #{$tablet} {
+        padding: .5rem 1.5rem;
+        width: 280px;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+    & .textLine {
+        position: relative;
+        padding-left: 56px;
+        & b {
+            width: 28px;
+            position: relative;
+            display: inline-block;
+            vertical-align: top;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        &.iconSmall {
+            padding-left: 32px;
+            & b {
+                width: 18px;
+            }
+        }
+    }
+}
+
+.profileRight {
+    padding: 1.75rem .25rem;
+    @media #{$tablet} {
+        padding: 2rem 0;
+        margin-left: 300px;
+    }
+    & .profileData {
+        @media #{$tablet} {
+            padding: 0 2rem;
+            width: 80%;
+            float: left;
+            border-right: 1px solid #ddd;
+        }
+    }
+    & .profileDox {
+        @media #{$tablet} {
+            padding: 0 2rem;
+            width: 20%;
+            float: left;
+        }
+    }
+}
+
+.downloadCard {
+    padding: .5rem .75rem;
+    padding-left: 50px;
+    margin-bottom: 1rem;
+    position: relative;
+    & .dcIcon {
+        position: absolute;
+        left: .15rem;
+        top: .5rem;
+        width: 36px;
+        height: 40px;
+    }
+    & .dcInfo {
+        color: #888;
+        font-size: .813rem;
+        & p {
+            margin: 0;
+        }
+        & a {
+            color: $primary;
+            text-transform: uppercase;
+            font-weight: 700;
+            font-size: .75rem;
+        }
+    }
+}
+
+.profileAction {
+    & li {
+        margin-bottom: 1rem;
+        & a {
+            &:hover {
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+.profileServices {
+    font-weight: 600;
+    color: #888;
+    & li {
+        display: inline-block;
+        vertical-align: top;
+        margin-right: 2rem;
+        & span {
+            width: 35px;
+            height: 45px;
+            display: inline-block;
+            vertical-align: middle;
+            margin-right: .25rem;
+            & img {
+                position: relative;
+                left: 0;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+        }
+    }
+}

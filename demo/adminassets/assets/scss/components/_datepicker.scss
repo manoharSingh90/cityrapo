@@ -1,0 +1,40 @@
+.date-picker-wrapper {
+    border: none;
+    background: #fff;
+    color: #000;
+    font-size: .875rem;
+    box-shadow: 0 0 6px rgba(#000, .3);
+    font-family: $familyMontserrat, $fallbackfont;
+    & .month-wrapper {
+        padding: 5px 10px;
+        border: none;
+        min-width: 240px;
+        & table {
+            width: 100%;
+            & .day {
+                padding: 8px 0;
+                line-height: 1.5;
+                font-size: 13px;
+                font-weight: 500;
+                width: 35px;
+                height: 35px;
+                text-align: center;
+                &.checked {
+                    background-color: $secondary;
+                }
+                &.toMonth {
+                    &.hovering {
+                        background-color: rgba($secondary, .2);
+                    }
+                }
+            }
+        }
+    }
+    & .footer {
+        display: none;
+    }
+    & .first-date-selected,
+    & .last-date-selected {
+        background-color: $secondary !important;
+    }
+}

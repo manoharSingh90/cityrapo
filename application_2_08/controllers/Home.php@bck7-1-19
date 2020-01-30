@@ -1,0 +1,83 @@
+<?php
+defined('BASEPATH') OR exit('No direct script access allowed');
+
+class Home extends CI_Controller {
+
+	 function __construct()
+	{
+		parent::__construct();
+		$this->load->model('Itinerarie_model'); 
+		
+	}
+	public function index()
+	{   
+	     $logedin  = $this->session->userdata('id');
+		 $home_itineraries_data  = $this->Itinerarie_model->home_itineraries();
+		 //print_r($home_itineraries_data->itinerary_category ); die();
+		 //$hostimage = $this->Itinerarie_model->getProfileimage($logedin);
+		 //$allowItinerary = $this->Itinerarie_model->allowHost($logedin);
+		 $url = $this->uri->segment(1);		
+		if(!empty($logedin) && $url=='home'){
+		    return redirect('itineraries');
+			 //$this->load->view('itineraries/itineraries',compact('hostimage','allowItinerary'));
+			}
+		else{
+			$this->load->view('home/home',['data'=> $home_itineraries_data]);
+			}	
+		   
+	}
+
+	public function detail_itinerarie($id)
+	{
+        $details = $this->Itinerarie_model->details_itineraries($id);
+        //print_r($details); die();
+		$this->load->view('home/detail_itineraries',['itineraries_detail'=>$details]);
+	}
+	public function book_itinerarie($id)
+	{
+		$details = $this->Itinerarie_model->details_itineraries($id);
+
+		$this->load->view('home/book_itineraries',['booking_data'=>$details]);
+	}
+
+	public function search_host(){
+
+		$searchKeys =  $this->input->post('searchCity');
+		$searchDates   = date('Y-m-d',strtotime($this->input->post('searchDate')));
+		//echo $searchDates; die();
+
+		if($searchKeys == 'All' && $searchDates=='1970-01-01'){
+			return redirect('home');
+		}elseif($searchKeys !='All' && $searchDates =='1970-01-01' ){	
+
+		     $hoster = $this->Itinerarie_model->hoster_search_city($searchKeys);
+		     //print_r($hoster); die();
+		     $this->load->view('home/searchhost',['data'=>$hoster,'city'=>$searchKeys ,'dates'=>$searchDates]);
+			
+		}elseif($searchKeys !='All' && $searchDates !=''){
+			$hoster = $this->Itinerarie_model->hoster_search_both($searchKeys,$searchDates);
+			//print_r($hoster); die();
+		    $this->load->view('home/searchhost',['data'=>$hoster,'city'=>$searchKeys ,'dates'=>$searchDates]);
+		}elseif($searchKeys =='All' && !empty($searchDates)){
+			$hoster = $this->Itinerarie_model->hoster_search($searchKeys,$searchDates);
+			//print_r($hoster); die();
+		    $this->load->view('home/searchhost',['data'=>$hoster,'city'=>$searchKeys ,'dates'=>$searchDates]);
+		}
+		
+		 
+	}
+	public function visitor_login(){
+		 $email_id = $this->input->post('visitor_email');
+	     $pass = $this->input->post('visitor_pass');
+	     if(($email_id == 'user1@iwl.com' || $email_id == 'user2@iwl.com') && 
+	     	($pass == '1@#$&123@iwl' || $pass == '1@#156$&@iwl')){
+	     	$this->session->set_userdata('status','success');
+
+	            return redirect('home');
+	     	
+	     }else{
+	     	return redirect('home');
+	     }
+	     
+	}
+}

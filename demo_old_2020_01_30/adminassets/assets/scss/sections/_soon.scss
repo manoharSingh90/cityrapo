@@ -1,0 +1,104 @@
+.soonPage {
+    color: #fff;
+    padding: 2rem 0;
+    overflow: hidden;
+    background-color: $primary;
+    background-size: cover;
+    background-position: left center;
+    background-repeat: no-repeat;
+    background-blend-mode: multiply;
+    & a {
+        font-family: $familyMontserrat, $fallbackfont;
+        font-weight: 600;
+        &:hover {
+            text-decoration: none;
+        }
+    }
+    @media #{$tablet} {
+        padding: 4rem 0;
+    }
+}
+
+.newsletterForm {
+    margin: 1.5rem auto;
+    max-width: 440px;
+    position: relative;
+    @media #{$tablet} {
+        margin: 0 3rem;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    & .form-control {
+        color: #fff;
+        background: none;
+        &:focus {
+            border-color: #fff;
+        }
+        &::-webkit-input-placeholder {
+            color: #fff;
+        }
+    }
+}
+
+.soonBox {
+    font-size: .875rem;
+    padding: 1.25rem;
+    background: #fff;
+    color: #000;
+    margin: 0 auto;
+    max-width: 440px;
+    position: relative;
+    @media #{$tablet} {
+        padding: 2.75rem;
+    }
+    & h2 {
+        font-family: $familyMontserrat, $fallbackfont;
+        font-weight: 700;
+        text-transform: uppercase;
+        font-size: 1.5rem;
+        @media #{$tablet} {
+            font-size: 1.75rem;
+        }
+    }
+    & .contactLine {
+        padding-top: 1rem;
+        @media #{$tablet} {
+            padding-top: 3rem;
+        }
+        & span {
+            display: inline-block;
+            vertical-align: middle;
+            padding: .15rem 0;
+            padding-right: 1rem;
+            font-weight: 600;
+            @media #{$tablet} {
+                padding-right: 2rem;
+            }
+            &:first-child {
+                font-size: .875rem;
+                padding-right: 0;
+                margin-bottom: .375rem;
+            }
+            &:last-child {
+                padding-right: 0;
+                position: relative;
+                padding-left: 1rem;
+                padding-right: 0;
+                @media #{$tablet} {
+                    padding-left: 2rem;
+                }
+                &:before {
+                    content: "";
+                    width: 1px;
+                    height: 100%;
+                    display: block;
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    background: #ccc;
+                    opacity: .85;
+                }
+            }
+        }
+    }
+}

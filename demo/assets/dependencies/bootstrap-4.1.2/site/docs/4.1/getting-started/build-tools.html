@@ -1,0 +1,65 @@
+<html>
+      <head>
+        <meta charset="UTF-8">
+        <title>build-tools.md</title>
+      </head>
+      <body>
+        <hr>
+<p>layout: docs
+title: Build tools
+description: Learn how to use Bootstrap&#39;s included npm scripts to build our documentation, compile source code, run tests, and more.
+group: getting-started</p>
+<h2 id="toc-true">toc: true</h2>
+<h2 id="tooling-setup">Tooling setup</h2>
+<p>Bootstrap uses <a href="https://docs.npmjs.com/misc/scripts">NPM scripts</a> for its build system. Our <a href="{{ site.repo }}/blob/v{{ site.current_version }}/package.json">package.json</a> includes convenient methods for working with the framework, including compiling code, running tests, and more.</p>
+<p>To use our build system and run our documentation locally, you&#39;ll need a copy of Bootstrap&#39;s source files and Node. Follow these steps and you should be ready to rock:</p>
+<ol>
+<li><a href="https://nodejs.org/en/download/">Download and install Node.js</a>, which we use to manage our dependencies.</li>
+<li>Navigate to the root <code>/bootstrap</code> directory and run <code>npm install</code> to install our local dependencies listed in <a href="{{ site.repo }}/blob/v{{ site.current_version }}/package.json">package.json</a>.</li>
+<li><a href="https://www.ruby-lang.org/en/documentation/installation/">Install Ruby</a>, install <a href="https://bundler.io/">Bundler</a> with <code>gem install bundler</code>, and finally run <code>bundle install</code>. This will install all Ruby dependencies, such as Jekyll and plugins.<ul>
+<li><strong>Windows users:</strong> Read <a href="https://jekyllrb.com/docs/windows/">this guide</a> to get Jekyll up and running without problems.</li>
+</ul>
+</li>
+</ol>
+<p>When completed, you&#39;ll be able to run the various commands provided from the command line.</p>
+<h2 id="using-npm-scripts">Using NPM scripts</h2>
+<p>Our <a href="{{ site.repo }}/blob/v{{ site.current_version }}/package.json">package.json</a> includes the following commands and tasks:</p>
+<table>
+<thead>
+<tr>
+<th>Task</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>npm run dist</code></td>
+<td><code>npm run dist</code> creates the <code>/dist</code> directory with compiled files. <strong>Uses <a href="https://sass-lang.com/">Sass</a>, <a href="https://github.com/postcss/autoprefixer">Autoprefixer</a>, and <a href="https://github.com/mishoo/UglifyJS2">UglifyJS</a>.</strong></td>
+</tr>
+<tr>
+<td><code>npm test</code></td>
+<td>Same as <code>npm run dist</code> plus it runs tests locally</td>
+</tr>
+<tr>
+<td><code>npm run docs</code></td>
+<td>Builds and lints CSS and JavaScript for docs. You can then run the documentation locally via <code>npm run docs-serve</code>.</td>
+</tr>
+</tbody>
+</table>
+<p>Run <code>npm run</code> to see all the npm scripts.</p>
+<h2 id="autoprefixer">Autoprefixer</h2>
+<p>Bootstrap uses <a href="https://github.com/postcss/autoprefixer">Autoprefixer</a> (included in our build process) to automatically add vendor prefixes to some CSS properties at build time. Doing so saves us time and code by allowing us to write key parts of our CSS a single time while eliminating the need for vendor mixins like those found in v3.</p>
+<p>We maintain the list of browsers supported through Autoprefixer in a separate file within our GitHub repository. See <a href="{{ site.repo }}/blob/v{{ site.current_version }}/package.json">/package.json</a> for details.</p>
+<h2 id="local-documentation">Local documentation</h2>
+<p>Running our documentation locally requires the use of Jekyll, a decently flexible static site generator that provides us: basic includes, Markdown-based files, templates, and more. Here&#39;s how to get it started:</p>
+<ol>
+<li>Run through the <a href="#tooling-setup">tooling setup</a> above to install Jekyll (the site builder) and other Ruby dependencies with <code>bundle install</code>.</li>
+<li>From the root <code>/bootstrap</code> directory, run <code>npm run docs-serve</code> in the command line.</li>
+<li>Open <code>http://localhost:9001</code> in your browser, and voilà.</li>
+</ol>
+<p>Learn more about using Jekyll by reading its <a href="https://jekyllrb.com/docs/home/">documentation</a>.</p>
+<h2 id="troubleshooting">Troubleshooting</h2>
+<p>Should you encounter problems with installing dependencies, uninstall all previous dependency versions (global and local). Then, rerun <code>npm install</code>.</p>
+
+      </body>
+    </html>

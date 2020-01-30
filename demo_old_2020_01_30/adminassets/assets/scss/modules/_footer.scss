@@ -1,0 +1,22 @@
+footer {
+    background: #383838;
+    padding: .75rem 1.75rem;
+    font-family: $familyMontserrat, $fallbackfont;
+    color: #aaa;
+    font-size: .75rem;
+    font-weight: 500;
+    width: 100%;
+    & .footerLogo {
+        width: 200px;
+        margin: 0;
+        position: relative;
+        display: block;
+        opacity: .9;
+    }
+    & .copyrightText {
+        font-size: .75rem;
+        opacity: .45;
+        padding: .438rem 0;
+        display: block;
+    }
+}

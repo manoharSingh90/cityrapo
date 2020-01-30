@@ -1,0 +1,30 @@
+<html>
+      <head>
+        <meta charset="UTF-8">
+        <title>screenreaders.md</title>
+      </head>
+      <body>
+        <hr>
+<p>layout: docs
+title: Screenreaders
+description: Use screenreader utilities to hide elements on all devices except screen readers.
+group: utilities</p>
+<h2 id="toc-true">toc: true</h2>
+<p>Hide an element to all devices <strong>except screen readers</strong> with <code>.sr-only</code>. Combine <code>.sr-only</code> with <code>.sr-only-focusable</code> to show the element again when it&#39;s focused (e.g. by a keyboard-only user). Can also be used as mixins.</p>
+<p>{%- comment -%}
+Necessary for following <a href="{{ site.baseurl }}/docs/{{ site.docs_version }}/getting-started/#accessibility">accessibility best practices</a>.
+{%- endcomment -%}</p>
+<p>{% capture example %}
+<a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
+{% endcapture %}
+{% include example.html content=example %}</p>
+<p>{% highlight scss %}
+// Usage as a mixin
+.skip-navigation {
+  @include sr-only;
+  @include sr-only-focusable;
+}
+{% endhighlight %}</p>
+
+      </body>
+    </html>

@@ -1,0 +1,404 @@
+<?php
+defined('BASEPATH') OR exit('No direct script access allowed');
+
+class Footer extends CI_Controller {
+
+	 function __construct()
+	{
+		parent::__construct();
+		$this->load->model('Itinerarie_model'); 
+		$this->load->model('User_model'); 
+		date_default_timezone_set("Asia/Kolkata");
+	}
+
+	public function contact(){
+	    $loggedInUser = $this->session->userdata('id');
+		$hostimage = $this->Itinerarie_model->getProfileimage($loggedInUser);
+		$allowItinerary = $this->Itinerarie_model->allowHost($loggedInUser);
+		$this->load->view('footer_page/contact',compact('loggedInUser','hostimage','allowItinerary'));
+	}
+	
+	public function policies(){
+	    $loggedInUser = $this->session->userdata('id');
+		$hostimage = $this->Itinerarie_model->getProfileimage($loggedInUser);
+		$allowItinerary = $this->Itinerarie_model->allowHost($loggedInUser);
+		$this->load->view('footer_page/policies',compact('loggedInUser','hostimage','allowItinerary'));
+	}
+	public function cancellation(){
+	    $loggedInUser = $this->session->userdata('id');
+		$hostimage = $this->Itinerarie_model->getProfileimage($loggedInUser);
+		$allowItinerary = $this->Itinerarie_model->allowHost($loggedInUser);
+		$this->load->view('footer_page/cancellation',compact('loggedInUser','hostimage','allowItinerary'));
+	}
+	public function terms_and_conditions(){
+	    $loggedInUser = $this->session->userdata('id');
+		$hostimage = $this->Itinerarie_model->getProfileimage($loggedInUser);
+		$allowItinerary = $this->Itinerarie_model->allowHost($loggedInUser);
+		$this->load->view('footer_page/terms&conditions',compact('loggedInUser','hostimage','allowItinerary'));
+	}
+	public function legal(){
+	    $loggedInUser = $this->session->userdata('id');
+		$hostimage = $this->Itinerarie_model->getProfileimage($loggedInUser);
+		$allowItinerary = $this->Itinerarie_model->allowHost($loggedInUser);
+		$this->load->view('footer_page/legal',compact('loggedInUser','hostimage','allowItinerary'));
+	}
+	public function about(){
+	    $loggedInUser = $this->session->userdata('id');
+		$hostimage = $this->Itinerarie_model->getProfileimage($loggedInUser);
+		$allowItinerary = $this->Itinerarie_model->allowHost($loggedInUser);
+		$this->load->view('footer_page/about',compact('loggedInUser','hostimage','allowItinerary'));
+	}
+	public function advertisement(){
+	     $loggedInUser = $this->session->userdata('id');
+		$hostimage = $this->Itinerarie_model->getProfileimage($loggedInUser);
+		$allowItinerary = $this->Itinerarie_model->allowHost($loggedInUser);
+		$this->load->view('footer_page/advertising',compact('loggedInUser','hostimage','allowItinerary'));
+	}
+	public function copyright(){
+	    $loggedInUser = $this->session->userdata('id');
+		$hostimage = $this->Itinerarie_model->getProfileimage($loggedInUser);
+		$allowItinerary = $this->Itinerarie_model->allowHost($loggedInUser);
+		$this->load->view('footer_page/copyright',compact('loggedInUser','hostimage','allowItinerary'));
+	}
+	public function photo_credites(){
+	    $loggedInUser = $this->session->userdata('id');
+		$hostimage = $this->Itinerarie_model->getProfileimage($loggedInUser);
+		$allowItinerary = $this->Itinerarie_model->allowHost($loggedInUser);
+		$this->load->view('footer_page/photo_credits',compact('loggedInUser','hostimage','allowItinerary'));
+	}
+	
+	public function soon(){
+	     $loggedInUser = $this->session->userdata('id');
+		$hostimage = $this->Itinerarie_model->getProfileimage($loggedInUser);
+		$allowItinerary = $this->Itinerarie_model->allowHost($loggedInUser);
+		$this->load->view('footer_page/soon',compact('loggedInUser','hostimage','allowItinerary'));
+	}
+	public function media(){
+	    $loggedInUser = $this->session->userdata('id');
+		$hostimage = $this->Itinerarie_model->getProfileimage($loggedInUser);
+		$allowItinerary = $this->Itinerarie_model->allowHost($loggedInUser);
+		$this->load->view('footer_page/media',compact('loggedInUser','hostimage','allowItinerary'));
+	}
+	public function why_host(){
+	    $loggedInUser = $this->session->userdata('id');
+		$hostimage = $this->Itinerarie_model->getProfileimage($loggedInUser);
+		$allowItinerary = $this->Itinerarie_model->allowHost($loggedInUser);
+		$this->load->view('footer_page/why_host',compact('loggedInUser','hostimage','allowItinerary'));
+	}
+	public function take_pledge(){
+		$loggedInUser = $this->session->userdata('id');
+		$hostimage = $this->Itinerarie_model->getProfileimage($loggedInUser);
+		$allowItinerary = $this->Itinerarie_model->allowHost($loggedInUser);
+		$this->load->view('footer_page/take_a_pledge',compact('loggedInUser','hostimage','allowItinerary'));
+	}
+
+	public function knowmore_india(){
+	    $loggedInUser = $this->session->userdata('id');
+		$hostimage = $this->Itinerarie_model->getProfileimage($loggedInUser);
+		$allowItinerary = $this->Itinerarie_model->allowHost($loggedInUser);
+		$this->load->view('footer_page/knowmore_india',compact('loggedInUser','hostimage','allowItinerary'));
+	}
+// NORTH INDIA	
+	public function knowmore_north(){
+	    $loggedInUser = $this->session->userdata('id');
+		$hostimage = $this->Itinerarie_model->getProfileimage($loggedInUser);
+		$allowItinerary = $this->Itinerarie_model->allowHost($loggedInUser);
+		$this->load->view('footer_page/knowmore_north',compact('loggedInUser','hostimage','allowItinerary'));
+	}
+	public function knowmore_north_culture(){
+	    $loggedInUser = $this->session->userdata('id');
+		$hostimage = $this->Itinerarie_model->getProfileimage($loggedInUser);
+		$allowItinerary = $this->Itinerarie_model->allowHost($loggedInUser);
+		$this->load->view('footer_page/knowmore_north_culture',compact('loggedInUser','hostimage','allowItinerary'));
+	}
+	public function knowmore_north_food(){
+	    $loggedInUser = $this->session->userdata('id');
+		$hostimage = $this->Itinerarie_model->getProfileimage($loggedInUser);
+		$allowItinerary = $this->Itinerarie_model->allowHost($loggedInUser);
+		$this->load->view('footer_page/knowmore_north_food',compact('loggedInUser','hostimage','allowItinerary'));
+	}
+	public function knowmore_north_heritage(){
+	    $loggedInUser = $this->session->userdata('id');
+		$hostimage = $this->Itinerarie_model->getProfileimage($loggedInUser);
+		$allowItinerary = $this->Itinerarie_model->allowHost($loggedInUser);
+		$this->load->view('footer_page/knowmore_north_heritage',compact('loggedInUser','hostimage','allowItinerary'));
+	}
+	public function knowmore_north_people(){
+	    $loggedInUser = $this->session->userdata('id');
+		$hostimage = $this->Itinerarie_model->getProfileimage($loggedInUser);
+		$allowItinerary = $this->Itinerarie_model->allowHost($loggedInUser);
+		$this->load->view('footer_page/knowmore_north_people',compact('loggedInUser','hostimage','allowItinerary'));
+	}
+//NORTH EAST INDIA	
+	public function knowmore_north_east(){
+	    $loggedInUser = $this->session->userdata('id');
+		$hostimage = $this->Itinerarie_model->getProfileimage($loggedInUser);
+		$allowItinerary = $this->Itinerarie_model->allowHost($loggedInUser);
+		$this->load->view('footer_page/knowmore_north_east',compact('loggedInUser','hostimage','allowItinerary'));
+	}
+	public function knowmore_north_east_culture(){
+	    $loggedInUser = $this->session->userdata('id');
+		$hostimage = $this->Itinerarie_model->getProfileimage($loggedInUser);
+		$allowItinerary = $this->Itinerarie_model->allowHost($loggedInUser);
+		$this->load->view('footer_page/knowmore_north_east_culture',compact('loggedInUser','hostimage','allowItinerary'));
+	}
+	public function knowmore_north_east_food(){
+	    $loggedInUser = $this->session->userdata('id');
+		$hostimage = $this->Itinerarie_model->getProfileimage($loggedInUser);
+		$allowItinerary = $this->Itinerarie_model->allowHost($loggedInUser);
+		$this->load->view('footer_page/knowmore_north_east_food',compact('loggedInUser','hostimage','allowItinerary'));
+	}
+	public function knowmore_north_east_heritage(){
+	    $loggedInUser = $this->session->userdata('id');
+		$hostimage = $this->Itinerarie_model->getProfileimage($loggedInUser);
+		$allowItinerary = $this->Itinerarie_model->allowHost($loggedInUser);
+		$this->load->view('footer_page/knowmore_north_east_heritage',compact('loggedInUser','hostimage','allowItinerary'));
+	}
+	public function knowmore_north_east_people(){
+	    $loggedInUser = $this->session->userdata('id');
+		$hostimage = $this->Itinerarie_model->getProfileimage($loggedInUser);
+		$allowItinerary = $this->Itinerarie_model->allowHost($loggedInUser);
+		$this->load->view('footer_page/knowmore_north_east_people',compact('loggedInUser','hostimage','allowItinerary'));
+	}
+//EAST INDIA	
+	public function knowmore_east(){
+	    $loggedInUser = $this->session->userdata('id');
+		$hostimage = $this->Itinerarie_model->getProfileimage($loggedInUser);
+		$allowItinerary = $this->Itinerarie_model->allowHost($loggedInUser);
+		$this->load->view('footer_page/knowmore_east',compact('loggedInUser','hostimage','allowItinerary'));
+	}
+	public function knowmore_east_culture(){
+	    $loggedInUser = $this->session->userdata('id');
+		$hostimage = $this->Itinerarie_model->getProfileimage($loggedInUser);
+		$allowItinerary = $this->Itinerarie_model->allowHost($loggedInUser);
+		$this->load->view('footer_page/knowmore_east_culture',compact('loggedInUser','hostimage','allowItinerary'));
+	}
+	public function knowmore_east_food(){
+	    $loggedInUser = $this->session->userdata('id');
+		$hostimage = $this->Itinerarie_model->getProfileimage($loggedInUser);
+		$allowItinerary = $this->Itinerarie_model->allowHost($loggedInUser);
+		$this->load->view('footer_page/knowmore_east_food',compact('loggedInUser','hostimage','allowItinerary'));
+	}
+	public function knowmore_east_heritage(){
+	    $loggedInUser = $this->session->userdata('id');
+		$hostimage = $this->Itinerarie_model->getProfileimage($loggedInUser);
+		$allowItinerary = $this->Itinerarie_model->allowHost($loggedInUser);
+		$this->load->view('footer_page/knowmore_east_heritage',compact('loggedInUser','hostimage','allowItinerary'));
+	}
+	public function knowmore_east_people(){
+	    $loggedInUser = $this->session->userdata('id');
+		$hostimage = $this->Itinerarie_model->getProfileimage($loggedInUser);
+		$allowItinerary = $this->Itinerarie_model->allowHost($loggedInUser);
+		$this->load->view('footer_page/knowmore_east_people',compact('loggedInUser','hostimage','allowItinerary'));
+	}
+//WEST INDIA	
+	public function knowmore_west(){
+	    $loggedInUser = $this->session->userdata('id');
+		$hostimage = $this->Itinerarie_model->getProfileimage($loggedInUser);
+		$allowItinerary = $this->Itinerarie_model->allowHost($loggedInUser);
+		$this->load->view('footer_page/knowmore_west',compact('loggedInUser','hostimage','allowItinerary'));
+	}
+	public function knowmore_west_culture(){
+	    $loggedInUser = $this->session->userdata('id');
+		$hostimage = $this->Itinerarie_model->getProfileimage($loggedInUser);
+		$allowItinerary = $this->Itinerarie_model->allowHost($loggedInUser);
+		$this->load->view('footer_page/knowmore_west_culture',compact('loggedInUser','hostimage','allowItinerary'));
+	}
+	public function knowmore_west_food(){
+	    $loggedInUser = $this->session->userdata('id');
+		$hostimage = $this->Itinerarie_model->getProfileimage($loggedInUser);
+		$allowItinerary = $this->Itinerarie_model->allowHost($loggedInUser);
+		$this->load->view('footer_page/knowmore_west_food',compact('loggedInUser','hostimage','allowItinerary'));
+	}
+	public function knowmore_west_heritage(){
+	    $loggedInUser = $this->session->userdata('id');
+		$hostimage = $this->Itinerarie_model->getProfileimage($loggedInUser);
+		$allowItinerary = $this->Itinerarie_model->allowHost($loggedInUser);
+		$this->load->view('footer_page/knowmore_west_heritage',compact('loggedInUser','hostimage','allowItinerary'));
+	}
+	public function knowmore_west_people(){
+	    $loggedInUser = $this->session->userdata('id');
+		$hostimage = $this->Itinerarie_model->getProfileimage($loggedInUser);
+		$allowItinerary = $this->Itinerarie_model->allowHost($loggedInUser);
+		$this->load->view('footer_page/knowmore_west_people',compact('loggedInUser','hostimage','allowItinerary'));
+	}
+//SOUTH INDIA	
+	public function knowmore_south(){
+	    $loggedInUser = $this->session->userdata('id');
+		$hostimage = $this->Itinerarie_model->getProfileimage($loggedInUser);
+		$allowItinerary = $this->Itinerarie_model->allowHost($loggedInUser);
+		$this->load->view('footer_page/knowmore_south',compact('loggedInUser','hostimage','allowItinerary'));
+	}
+	public function knowmore_south_culture(){
+	    $loggedInUser = $this->session->userdata('id');
+		$hostimage = $this->Itinerarie_model->getProfileimage($loggedInUser);
+		$allowItinerary = $this->Itinerarie_model->allowHost($loggedInUser);
+		$this->load->view('footer_page/knowmore_south_culture',compact('loggedInUser','hostimage','allowItinerary'));
+	}
+	public function knowmore_south_food(){
+	    $loggedInUser = $this->session->userdata('id');
+		$hostimage = $this->Itinerarie_model->getProfileimage($loggedInUser);
+		$allowItinerary = $this->Itinerarie_model->allowHost($loggedInUser);
+		$this->load->view('footer_page/knowmore_south_food',compact('loggedInUser','hostimage','allowItinerary'));
+	}
+	public function knowmore_south_heritage(){
+	    $loggedInUser = $this->session->userdata('id');
+		$hostimage = $this->Itinerarie_model->getProfileimage($loggedInUser);
+		$allowItinerary = $this->Itinerarie_model->allowHost($loggedInUser);
+		$this->load->view('footer_page/knowmore_south_heritage',compact('loggedInUser','hostimage','allowItinerary'));
+	}
+	public function knowmore_south_people(){
+	    $loggedInUser = $this->session->userdata('id');
+		$hostimage = $this->Itinerarie_model->getProfileimage($loggedInUser);
+		$allowItinerary = $this->Itinerarie_model->allowHost($loggedInUser);
+		$this->load->view('footer_page/knowmore_south_people',compact('loggedInUser','hostimage','allowItinerary'));
+	}
+//CENTRAL INDIA	
+	public function knowmore_central(){
+	    $loggedInUser = $this->session->userdata('id');
+		$hostimage = $this->Itinerarie_model->getProfileimage($loggedInUser);
+		$allowItinerary = $this->Itinerarie_model->allowHost($loggedInUser);
+		$this->load->view('footer_page/knowmore_central',compact('loggedInUser','hostimage','allowItinerary'));
+	}
+	public function knowmore_central_culture(){
+	    $loggedInUser = $this->session->userdata('id');
+		$hostimage = $this->Itinerarie_model->getProfileimage($loggedInUser);
+		$allowItinerary = $this->Itinerarie_model->allowHost($loggedInUser);
+		$this->load->view('footer_page/knowmore_central_culture',compact('loggedInUser','hostimage','allowItinerary'));
+	}
+	public function knowmore_central_food(){
+	    $loggedInUser = $this->session->userdata('id');
+		$hostimage = $this->Itinerarie_model->getProfileimage($loggedInUser);
+		$allowItinerary = $this->Itinerarie_model->allowHost($loggedInUser);
+		$this->load->view('footer_page/knowmore_central_food',compact('loggedInUser','hostimage','allowItinerary'));
+	}
+	public function knowmore_central_heritage(){
+	    $loggedInUser = $this->session->userdata('id');
+		$hostimage = $this->Itinerarie_model->getProfileimage($loggedInUser);
+		$allowItinerary = $this->Itinerarie_model->allowHost($loggedInUser);
+		$this->load->view('footer_page/knowmore_central_heritage',compact('loggedInUser','hostimage','allowItinerary'));
+	}
+	public function knowmore_central_people(){
+	    $loggedInUser = $this->session->userdata('id');
+		$hostimage = $this->Itinerarie_model->getProfileimage($loggedInUser);
+		$allowItinerary = $this->Itinerarie_model->allowHost($loggedInUser);
+		$this->load->view('footer_page/knowmore_central_people',compact('loggedInUser','hostimage','allowItinerary'));
+	}
+	// public function knowmore_south(){
+	// 	$this->load->view('footer_page/knowmore_south');
+	// }
+	
+public function how_it_works(){
+	    $loggedInUser = $this->session->userdata('id');
+		$hostimage = $this->Itinerarie_model->getProfileimage($loggedInUser);
+		$allowItinerary = $this->Itinerarie_model->allowHost($loggedInUser);
+		$this->load->view('footer_page/how_it_works',compact('loggedInUser','hostimage','allowItinerary'));
+	}	
+
+public function feedback(){
+	    $loggedInUser = $this->session->userdata('id');
+		$hostimage = $this->Itinerarie_model->getProfileimage($loggedInUser);
+		$allowItinerary = $this->Itinerarie_model->allowHost($loggedInUser);
+		$this->load->view('footer_page/feedback',compact('loggedInUser','hostimage','allowItinerary'));
+	}
+	
+public function cookies(){
+	    $loggedInUser = $this->session->userdata('id');
+		$hostimage = $this->Itinerarie_model->getProfileimage($loggedInUser);
+		$allowItinerary = $this->Itinerarie_model->allowHost($loggedInUser);
+		$this->load->view('footer_page/cookies',compact('loggedInUser','hostimage','allowItinerary'));
+	}
+	
+public function privacy(){
+	    $loggedInUser = $this->session->userdata('id');
+		$hostimage = $this->Itinerarie_model->getProfileimage($loggedInUser);
+		$allowItinerary = $this->Itinerarie_model->allowHost($loggedInUser);
+		$this->load->view('footer_page/privacy',compact('loggedInUser','hostimage','allowItinerary'));
+	}
+
+public function faq(){
+	    $loggedInUser = $this->session->userdata('id');
+		$hostimage = $this->Itinerarie_model->getProfileimage($loggedInUser);
+		$allowItinerary = $this->Itinerarie_model->allowHost($loggedInUser);
+		$this->load->view('footer_page/faq',compact('loggedInUser','hostimage','allowItinerary'));
+	}
+
+public function work_with_us(){
+	    $loggedInUser = $this->session->userdata('id');
+		$hostimage = $this->Itinerarie_model->getProfileimage($loggedInUser);
+		$allowItinerary = $this->Itinerarie_model->allowHost($loggedInUser);
+		$this->load->view('footer_page/work_with_us',compact('loggedInUser','hostimage','allowItinerary'));
+	}
+	
+	
+ public function contactform(){
+      $this->load->view('footer_page/contact_form');
+	 }	
+
+ public function sendContactForm(){
+      $dataForm = $this->input->post();
+	  
+	  $data = array(
+	       'name'=>$dataForm['name'],
+		   'email'=>$dataForm['email'],
+		   'mobile_no'=>$dataForm['mobile'],
+		   'message'=>$dataForm['message'],
+		   'created_at'=>date('Y-m-d h:i:s A')
+	  );
+	  $msg = $this->User_model->insertContactData($data);
+	 
+	  if($msg==1){
+	  
+	       //$this->sendSMS();//call sms function		   
+		   $config = Array(
+					'protocol' => 'smtp',							
+					'smtp_host' => 'ssl://smtp.gmail.com',
+					'smtp_port' => 465,							
+					'smtp_user' =>'help@cityexplorers.in',							
+					'smtp_pass' =>'1cesb241',
+					'mailtype'  => 'html', 
+					'charset'   => 'iso-8859-1'
+				);	
+				$maildata['userName'] = $dataForm['name'];
+				$maildata['userEmail'] = $dataForm['email'];
+				$maildata['userMobile'] = $dataForm['mobile'];
+				$maildata['userMessage'] = $dataForm['message'];
+				//echo '<pre>';print_r($data);die;
+				$body = $this->load->view('mailer/contact_query_mail', $maildata, true );
+				$this->load->library('email',$config);
+				$this->email->set_newline("\r\n");
+				$this->email->from($dataForm['email']);
+				$this->email->to(SERVER_MAIL, 'City Explorers');				
+				$this->email->subject('Contact Query Mail');
+				$this->email->message($body);
+				$this->email->send();
+				echo 'success';die;
+		  }
+	   
+	 }
+	 
+//====== Send SMS for user mobile number function =========//
+public function sendSMS(){
+	// Account details
+	$apiKey = urlencode('wYrBr1dWl4I-X2v4i3HqIwFPRrxuKMZ61G6HeoQLOc');
+	
+	// Message details
+	$numbers = array(7982142067, 9720118113);
+	$sender = urlencode('TXTLCL');
+	$message = rawurlencode('Hi, Testing.....');
+ 	$numbers = implode(',', $numbers);
+ 	// Prepare data for POST request
+	$data = array('apikey' => $apiKey, 'numbers' => $numbers, "sender" => $sender, "message" => $message);
+ 	// Send the POST request with cURL
+	$ch = curl_init('https://api.textlocal.in/send/');
+	curl_setopt($ch, CURLOPT_POST, true);
+	curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
+	curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+	$response = curl_exec($ch);
+	curl_close($ch);
+	
+	// Process your response here
+	echo $response;
+}
+	 
+}

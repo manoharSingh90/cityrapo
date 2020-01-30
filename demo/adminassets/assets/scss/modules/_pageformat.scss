@@ -1,0 +1,158 @@
+main {
+    padding-top: 55px;
+    @media #{$tablet} {
+        padding-top: 71px;
+    }
+    @media #{$desktop} {
+        padding-top: 75px;
+    }
+}
+
+header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+}
+
+.font-weight-semibold {
+    font-weight: 600;
+}
+
+.font-normal {
+    font-size: .875rem;
+}
+
+.pageFormat {
+    padding: 1.75rem 0;
+    position: relative;
+}
+
+.pageSearch {
+    padding: .75rem;
+    background: #fff;
+    box-shadow: 0 1px 18px rgba(#000, .2);
+    margin-top: -1.25rem;
+    position: relative;
+    z-index: 1;
+    @media #{$tablet} {
+        margin-left: .875rem;
+        margin-right: .875rem;
+        padding: .875rem;
+    }
+    @media #{$tablet} {
+        padding: .875rem 1.5rem;
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+    }
+    @media #{$desktop} {
+        padding: .875rem 2.25rem;
+    }
+    @media #{$desktop-lg} {
+        padding: .875rem 3rem;
+    }
+    & .itinerariesHead {
+        padding: 0;
+    }
+}
+
+///////////////////////////////
+form {
+    & small.error {
+        font-size: 11px;
+        color: #f00;
+        display: block;
+    }
+}
+
+.credentialForm {
+    & form {
+        & small.error {
+            margin-top: -.625rem;
+            margin-bottom: .625rem;
+        }
+    }
+}
+
+.boxCover {
+    padding: 1rem 1.5rem;
+    margin: 0 .5rem;
+    background: #fff;
+    box-shadow: 0 0 8px rgba(#000, 0.15);
+}
+
+.text-link {
+    color: #ff0;
+}
+
+.cform-box {
+    position: relative;
+    & .cform-tab {
+        text-transform: uppercase;
+        font-size: .875rem;
+        font-weight: bold;
+        font-family: $familyMontserrat, $fallbackfont;
+        &.nav-tabs {
+            border-bottom-color: #eee;
+            border-width: 2px;
+        }
+        &.nav-tabs .nav-item {
+            flex-grow: 1;
+            flex-basis: 0;
+            margin-right: 1.5rem;
+            @media #{$desktop} {
+                flex-grow: initial;
+                flex-basis: initial;
+            }
+        }
+        &.nav-tabs {
+            & .nav-link {
+                text-align: center;
+                color: inherit;
+                border: none;
+                border-bottom: 1px solid transparent;
+                border-radius: 0;
+                padding-left: .5rem;
+                padding-right: .5rem;
+                opacity: .8;
+                position: relative;
+                & .badge {
+                    width: 20px;
+                    height: 20px;
+                    border-radius: 50%;
+                    display: block;
+                    position: absolute;
+                    right: -10px;
+                    top: 0;
+                    color: #fff;
+                    background: $primary;
+                    text-align: center;
+                    line-height: 16px;
+                }
+            }
+        }
+        &.nav-tabs .nav-item.show .nav-link,
+        &.nav-tabs .nav-link.active {
+            border-color: transparent;
+            border-bottom-color: #ee464c;
+            border-width: 4px;
+            opacity: 1;
+        }
+    }
+    & .cform-content {
+        padding: .75rem 0;
+        width: 100%;
+        @media #{$mobile} {
+            padding: .5rem .75rem;
+        }
+        & .tab-pane {
+            width: 100%;
+        }
+        & .form-control {
+            margin-bottom: .625rem;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+}

@@ -1,0 +1,52 @@
+<html>
+      <head>
+        <meta charset="UTF-8">
+        <title>embed.md</title>
+      </head>
+      <body>
+        <hr>
+<p>layout: docs
+title: Embeds
+description: Create responsive video or slideshow embeds based on the width of the parent by creating an intrinsic ratio that scales on any device.
+group: utilities</p>
+<h2 id="toc-true">toc: true</h2>
+<h2 id="about">About</h2>
+<p>Rules are directly applied to <code>&lt;iframe&gt;</code>, <code>&lt;embed&gt;</code>, <code>&lt;video&gt;</code>, and <code>&lt;object&gt;</code> elements; optionally use an explicit descendant class <code>.embed-responsive-item</code> when you want to match the styling for other attributes.</p>
+<p><strong>Pro-Tip!</strong> You don&#39;t need to include <code>frameborder=&quot;0&quot;</code> in your <code>&lt;iframe&gt;</code>s as we override that for you.</p>
+<h2 id="example">Example</h2>
+<p>Wrap any embed like an <code>&lt;iframe&gt;</code> in a parent element with <code>.embed-responsive</code> and an aspect ratio. The <code>.embed-responsive-item</code> isn&#39;t strictly required, but we encourage it.</p>
+<p>{% capture example %}</p>
+<div class="embed-responsive embed-responsive-16by9">
+  <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/zpOULjyy-n8?rel=0" allowfullscreen></iframe>
+</div>
+{% endcapture %}
+{% include example.html content=example %}
+
+## Aspect ratios
+
+Aspect ratios can be customized with modifier classes.
+
+{% highlight html %}
+<!-- 21:9 aspect ratio -->
+<div class="embed-responsive embed-responsive-21by9">
+  <iframe class="embed-responsive-item" src="..."></iframe>
+</div>
+
+<!-- 16:9 aspect ratio -->
+<div class="embed-responsive embed-responsive-16by9">
+  <iframe class="embed-responsive-item" src="..."></iframe>
+</div>
+
+<!-- 4:3 aspect ratio -->
+<div class="embed-responsive embed-responsive-4by3">
+  <iframe class="embed-responsive-item" src="..."></iframe>
+</div>
+
+<!-- 1:1 aspect ratio -->
+<p><div class="embed-responsive embed-responsive-1by1">
+  <iframe class="embed-responsive-item" src="..."></iframe>
+</div>
+{% endhighlight %}</p>
+
+      </body>
+    </html>

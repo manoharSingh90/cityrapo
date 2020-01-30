@@ -1,0 +1,98 @@
+.filterCover {
+    padding: 2rem 0;
+    margin: 0 .5rem;
+    padding-top: 0;
+}
+
+.flyRight {
+    position: absolute;
+    right: 1rem;
+    top: 0;
+}
+
+.newStatus,
+.retryStatus,
+.rejectStatus,
+.waitStatus {
+    position: relative;
+    padding-bottom: 2px;
+    &:before {
+        content: "";
+        width: 70%;
+        height: 2px;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+    }
+}
+
+.newStatus {
+    &:before {
+        background: $primary;
+    }
+}
+
+.retryStatus {
+    &:before {
+        background: $green;
+    }
+}
+
+.rejectStatus {
+    &:before {
+        background: $red;
+    }
+}
+
+.waitStatus {
+    &:before {
+        background: $orange;
+    }
+}
+
+.tabLegends {
+    display: flex;
+    & li {
+        margin-left: 2rem;
+        & b {
+            width: 20px;
+            height: 4px;
+            margin-right: .25rem;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        font-size: 14px;
+        color: #999;
+        font-weight: 600;
+    }
+}
+
+.lgdColor-1 {
+    color: #42c5a5;
+}
+
+.lgdColor-2 {
+    color: #ffb400;
+}
+
+.lgdColor-3 {
+    color: #000;
+}
+
+.lgdBackgound-1 {
+    background: #42c5a5;
+}
+
+.lgdBackgound-2 {
+    background: #ffb400;
+}
+
+.lgdBackgound-3 {
+    background: #000;
+}
+
+.tableLinks {
+    & a {
+        margin: 0 .25rem;
+    }
+}

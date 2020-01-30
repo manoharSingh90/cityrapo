@@ -1,0 +1,22 @@
+/*!
+ * IWL THEME(V1)
+ */
+
+// Core variables and mixins
+@import "themecomponents/_variables.scss";
+@import "themecomponents/_mixins.scss";
+// Reset Style CSS
+@import "themecomponents/_reset.scss";
+// Core CSS
+@import "../components/_buttons.scss";
+@import "../components/_forms.scss";
+@import "../components/_modal.scss";
+@import "../components/_datatable.scss";
+@import "../components/_alert.scss";
+@import "../components/_tooltip.scss";
+@import "../components/_dropdown-menu.scss";
+@import "../components/_scrolltabs.scss";
+@import "../components/_charts.scss";
+@import "../components/_gauge.scss";
+@import "../components/_datepicker.scss";
+@import "../components/_owl.scss";

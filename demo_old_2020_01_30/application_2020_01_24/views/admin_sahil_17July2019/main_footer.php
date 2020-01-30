@@ -1,0 +1,1 @@
+<footer class="clearfix"> <span class="footerLogo float-left"><img src="<?php echo base_url();?>adminassets/assets/img/iwl_hr_white_logo.svg" alt="India with locals" /></span> <small class="copyrightText float-right">2018 &copy; Cityexplorers&trade; </small> </footer>
